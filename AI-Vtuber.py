@@ -3,11 +3,11 @@ import pyttsx3
 from bilibili_api import live, sync
 
 # 用你自己的API Key替换下面的字符串
-openai.api_key = "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"
+openai.api_key = "API-KEY"
 # 使用Davinci模型引擎
 model_engine = "text-davinci-003"
 
-room_id = 22747237
+room_id = 10000000
 room = live.LiveDanmaku(room_id)
 
 initial_prompt = "你是一个来自二次元的AI虚拟主播，之后我的输入均为观众输入，请简要回答，15个字左右吧。不要回答有关政治的问题！也不要回答敏感信息！。"
