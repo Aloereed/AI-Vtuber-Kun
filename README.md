@@ -36,6 +36,7 @@ pip 23.0.1 from C:\Users\Xzai\AppData\Local\Programs\Python\Python311\Lib\site-p
 
 将"API-KEY"修改为你的OpenAI Key
 将"room_id"的内容改为你的直播间id
+修改"C:\\Users\\Xzai\\Desktop\\aioutput.txt"为你自己存放字幕的地址
 
 然后打开终端，依次输入
 pip3 install openai
