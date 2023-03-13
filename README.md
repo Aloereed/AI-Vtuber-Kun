@@ -59,6 +59,7 @@ pip3 install bilibili-api-python
 
 ## TODO
 
+- [ ] TTS！！！！！！！！！！！！！！！！！！！！
 - [ ] 文档：各项目的 README、文档
 - [ ] Topic：直播话题：一起看，打游戏，互动游戏，……
 - [ ] murecom for muvtuber：基于心情的 BGM
