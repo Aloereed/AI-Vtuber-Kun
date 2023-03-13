@@ -34,7 +34,7 @@ pip 23.0.1 from C:\Users\Xzai\AppData\Local\Programs\Python\Python311\Lib\site-p
 ```python
 打开"AI-Vtuber.py"，编辑文件内容
 
-将"API-KEY"修改为你的OpenAI Key
+将"API-KEY"修改为你的OpenAI Key（文件里有一个key，还有15美元）
 将"room_id"的内容改为你的直播间id
 修改"C:\\Users\\Xzai\\Desktop\\aioutput.txt"为你自己存放字幕的地址
 
