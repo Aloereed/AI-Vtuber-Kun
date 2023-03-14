@@ -15,14 +15,6 @@ git clone https://github.com/your_username/AI-Vtuber-Kun.git
 ```
 pip install openai pyttsx3 bilibili-api-python
 ```
-3. 在代码中设置您的OpenAI API密钥：
-```python
-openai.api_key = "YOUR_API_KEY"
-```
-4. 在代码中设置您的Bilibili房间ID：
-```python
-room_id = YOUR_ROOM_ID
-```
 ### 使用方法
 1. 运行程序：
 ```python
