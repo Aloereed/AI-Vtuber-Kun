@@ -1,16 +1,21 @@
+# 导入必要的库
 import openai  # 导入OpenAI API库
 import pyttsx3  # 导入TTS（文本到语音）库
 from bilibili_api import live, sync  # 导入bilibili直播API库
 
-openai.api_key = "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"  # 设置OpenAI API Key
-model_engine = "text-davinci-003"  # 设置模型引擎
+# 设置OpenAI API Key和模型引擎
+openai.api_key = "YOUR_API_KEY"
+model_engine = "text-davinci-003"
 
-room_id = 22747237  # 直播间编号
-room = live.LiveDanmaku(room_id)  # 连接弹幕服务器
+# 设置直播间编号并连接弹幕服务器
+room_id = YOUR_ROOM_ID
+room = live.LiveDanmaku(room_id)
 
-initial_prompt = "你是一个来自二次元的AI虚拟主播，之后我的输入均为观众输入，请简要回答，15个字左右吧。不要回答有关政治的问题！也不要回答敏感信息！。"  # 初始提示信息
+# 设置初始提示信息
+initial_prompt = "你是一个来自二次元的AI虚拟主播，之后我的输入均为观众输入，请简要回答，15个字左右吧。不要回答有关政治的问题！也不要回答敏感信息！。"
 
-engine = pyttsx3.init()  # 初始化TTS引擎
+# 初始化TTS引擎
+engine = pyttsx3.init()
 
 async def generate_response(prompt):
     """
@@ -19,6 +24,7 @@ async def generate_response(prompt):
     :return: AI的回复
     """
     full_prompt = f"{initial_prompt} {prompt}"  # 合并初始提示和观众提问
+    # 调用OpenAI API生成回复
     response = openai.Completion.create(
         engine=model_engine,
         prompt=full_prompt,
@@ -26,7 +32,7 @@ async def generate_response(prompt):
         n=1,
         stop=None,
         temperature=0.5,
-    ).choices[0].text.strip()  # 调用OpenAI API生成回复
+    ).choices[0].text.strip()
     return response
 
 @room.on('DANMU_MSG')
@@ -44,13 +50,15 @@ async def on_danmaku(event):
 
     print(f"[AI回复”{user_name}“]: {response}")  # 打印AI回复信息
 
+    # 将回复写入文件
     with open("C:\\Users\\Xzai\\Desktop\\aioutput.txt", "a", encoding="utf-8") as f:
-        f.write(f"{response}\n")  # 将回复写入文件
+        f.write(f"{response}\n")
 
-    engine.say(response)  # 文本转语音
-    engine.runAndWait()  # 播放语音
+    # 文本转语音并播放
+    engine.say(response)
+    engine.runAndWait()
 
 sync(room.connect())  # 开始监听弹幕流
 
-#TODO 1.敏感词过滤
-#TODO 2.微软TTS
+# TODO 1.敏感词过滤
+# TODO 2.微软TTS
