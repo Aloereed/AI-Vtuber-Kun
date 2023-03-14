@@ -15,7 +15,7 @@ AI Vtuber Kun是一个由OpenAI驱动的虚拟主播，可以在Bilibili直播�
 ### 安装
 1. 克隆存储库：
 ```bash
-git clone https://github.com/your_username/AI-Vtuber-Kun.git
+git clone https://github.com/XzaiCloud/AI-Vtuber-Kun.git
 ```
 2. 安装所需的软件包：
 ```bash
