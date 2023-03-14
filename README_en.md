@@ -15,7 +15,7 @@ Community: [745682833](https://jq.qq.com/?_wv=1027&k=IO1usMMj)
 ### Installation
 1. Clone the repository:
 ```bash
-git clone https://github.com/your_username/AI-Vtuber-Kun.git
+git clone https://github.com/XzaiCloud/AI-Vtuber-Kun.git
 ```
 2. Install the required packages:
 ```bash
