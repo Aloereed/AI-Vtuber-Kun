@@ -4,11 +4,11 @@ import pyttsx3  # 导入TTS（文本到语音）库
 from bilibili_api import live, sync  # 导入bilibili直播API库
 
 # 设置OpenAI API Key和模型引擎
-openai.api_key = "YOUR_API_KEY"
+openai.api_key = input("请输入OpenAI API Key: ")
 model_engine = "text-davinci-003"
 
 # 设置直播间编号并连接弹幕服务器
-room_id = YOUR_ROOM_ID
+room_id = int(input("请输入直播间编号: "))
 room = live.LiveDanmaku(room_id)
 
 # 设置初始提示信息
