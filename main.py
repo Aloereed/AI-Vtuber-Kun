@@ -60,5 +60,4 @@ async def on_danmaku(event):
 
 sync(room.connect())  # 开始监听弹幕流
 
-# TODO 1.敏感词过滤
-# TODO 2.微软TTS
+# 告诉你个小秘密，这些代码，包括readme.md，都是ChatGPT写的哦！
